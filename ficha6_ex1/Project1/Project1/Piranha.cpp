@@ -6,3 +6,18 @@ ostream& operator<<(ostream& os, const Piranha& p) {
 
 	return os;
 }
+
+Piranha &Piranha::operator=(const Piranha& p) {
+	Peixe::operator=(p);
+	comprimento = p.comprimento;
+
+	return *this;
+}
+
+string Piranha::getAsString()const {
+	ostringstream os;
+
+	os << Peixe::getAsString() << ", comprimento: " << comprimento;
+
+	return os.str();
+}

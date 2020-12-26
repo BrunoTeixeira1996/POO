@@ -21,7 +21,7 @@ public:
 
 	int getPrego()const { return preco; }
 	int getCodigo()const { return codigo; }
-	string getAsString()const;
+	virtual string getAsString()const;
 
 	virtual ~Imovel() {};
 };
